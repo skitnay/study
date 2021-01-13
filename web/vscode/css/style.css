@@ -14,3 +14,17 @@ body div {
 body h1 {
   color: blueviolet;
 }
+
+.block {
+  color: aqua;
+  background-color: black;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.block__item {
+  color: aqua;
+  background-color: black;
+  font-size: 30px;
+  display: inline-block;
+}
