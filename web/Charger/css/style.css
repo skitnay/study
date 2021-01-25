@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*-----------------------------------------------*/
 .card__bg {
-  background: url("./img/Background/Bg.jpg") no-repeat;
+  background: url("../img/Background/Bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   max-height: 624px;
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   line-height: 32px;
   padding: 0px 0px 0px 80px;
-  background: url("./img/ico/Search_Iconw.svg") left no-repeat;
+  background: url("../img/ico/Search_Iconw.svg") left no-repeat;
 }
 
 .content__title p {
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   font-family: "Lucida Grande";
   font-size: 10px;
-  background: url("./img/ico/Apple_logo.png") 42px 6px no-repeat;
+  background: url("../img/ico/Apple_logo.png") 42px 6px no-repeat;
 }
 
 .apple__btn span {
@@ -268,11 +268,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .second__content-title-1 {
-  background: url("./img/ico/Share_Icon.png") left no-repeat;
+  background: url("../img/ico/Share_Icon.png") left no-repeat;
 }
 
 .second__content-title-2 {
-  background: url("./img/ico/Vector_Smart_Object.png") left no-repeat;
+  background: url("../img/ico/Vector_Smart_Object.png") left no-repeat;
 }
 
 .second__content-text {
@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fiveth__bg {
-  background: url("./img/Background/Bg5.png") no-repeat;
+  background: url("../img/Background/Bg5.png") no-repeat;
   background-size: cover;
   background-position: center;
   max-height: 696px;
@@ -435,7 +435,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 72px;
   margin: 35px 0px 40px 0px;
   padding: 0px 0px 0px 90px;
-  background: url("./img/ico/Business.png") left no-repeat;
+  background: url("../img/ico/Business.png") left no-repeat;
 }
 
 .fiveth__text {
@@ -457,7 +457,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fiveth__list li {
-  background: url("./img/ico/shape_1_copy_849.png") left 0px no-repeat;
+  background: url("../img/ico/shape_1_copy_849.png") left 0px no-repeat;
   padding: 0px 0px 50px 75px;
 }
 
