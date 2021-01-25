@@ -1,12 +1,5 @@
 @import "_nullstyle";
 
-body {
-}
-
-.wrapper {
-}
-.first__card {
-}
 .card__bg {
    background: url("./img/Background/Bg.jpg") no-repeat;
    background-size: cover;
@@ -91,8 +84,6 @@ body {
       padding: 0px 0px 0px 0px;
    }
 }
-.card__form {
-}
 
 .email {
    background: rgba(0, 0, 0, 0);
@@ -141,8 +132,6 @@ body {
    height: auto;
 }
 
-.second__card {
-}
 .second__card-bg {
    position: relative;
    max-height: 624px;
@@ -172,8 +161,7 @@ body {
    top: -281px;
    right: 163px;
 }
-.second__body {
-}
+
 .second_content-1 {
    margin: 164px 0px 0px 0px;
    width: 400px;
@@ -211,8 +199,6 @@ body {
    height: 170px;
 }
 
-.thier__card {
-}
 .thier__container {
    max-width: 959px;
    max-height: 790px;
@@ -247,10 +233,7 @@ body {
    position: relative;
    flex-flow: row;
 }
-.first__column {
-}
-.column__number-1 {
-}
+
 .column__title-1 {
    font-family: "Myriad Pro - Semibold";
    font-size: 24px;
@@ -260,10 +243,7 @@ body {
 .column__image-1 img {
    margin: 0px 0px 0px 0px;
 }
-.second__column {
-}
-.column__number-2 {
-}
+
 .column__title-2 {
    font-family: "Myriad Pro - Semibold";
    font-size: 24px;
@@ -271,23 +251,14 @@ body {
    margin: 31px 0px 50px 0px;
    padding: 0px 5px 0px 5px;
 }
-.column__image-2 {
-}
-.thierd__column {
-}
-.column__number-3 {
-}
+
 .column__title-3 {
    font-family: "Myriad Pro - Semibold";
    font-size: 24px;
    line-height: 32px;
    margin: 31px 0px 50px 0px;
 }
-.column__image-3 {
-}
 
-.fourth__card {
-}
 .fourth__bg {
    position: relative;
    background: #000;
@@ -325,10 +296,6 @@ body {
    }
 }
 
-.fiveth__card {
-}
-.fiveth__container {
-}
 .fiveth__bg {
    background: url("./img/Background/Bg5.png") no-repeat;
    background-size: cover;
