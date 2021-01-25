@@ -1,0 +1,60 @@
+//Обнулятель
+@import "_nullstyle";
+
+body {
+   background: #000;
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   height: 100%;
+   overflow: hidden;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.content {
+}
+.content__circle {
+   width: 100px;
+   height: 100px;
+   background-color: #fff;
+   border-radius: 50%;
+   position: relative;
+   left: 0;
+
+   animation-name: white-cerlce;
+
+   animation-duration: 2s;
+
+   animation-timing-function: linear;
+
+   animation-iteration-count: 1;
+
+   animation-direction: alternate-reverse;
+
+   animation-delay: -1s;
+
+   animation-fill-mode: forwards;
+}
+
+.content:hover .content__circle {
+   animation-play-state: paused;
+}
+
+@keyframes white-cerlce {
+   0% {
+      left: 0;
+   }
+
+   50% {
+      border-radius: 0%;
+   }
+
+   100% {
+      left: 500px;
+   }
+}
