@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content__title {
-  margin: 106px 0px 28px 0px;
+  margin: 106px 0px 30px 0px;
   color: white;
   font-family: "MyriadPro";
   font-size: 32px;
@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #000;
   max-width: 216px;
   border-radius: 10px;
-  margin: 12px 0px 50px 0px;
+  margin: 16px 0px 57px 0px;
 }
 
 .apple__btn {
@@ -276,14 +276,14 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.iphone_card2-b {
+.iphone__card2-b {
   width: 419px;
   height: 491px;
   margin: -40px 0px 0px 0px;
   z-index: -1;
 }
 
-.iphone_card2-w {
+.iphone__card2-w {
   position: relative;
   width: 419px;
   height: 491px;
@@ -459,12 +459,13 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: rgba(60, 208, 114, 0.8);
+  background: rgba(60, 208, 114, 0.9);
   max-height: 696px;
   z-index: 2;
 }
 
 .fiveth__content {
+  min-height: 696px;
   max-width: 480px;
   margin: 0 0px 0 auto;
 }
@@ -474,7 +475,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 36px;
   color: #ffffff;
   line-height: 72px;
-  margin: 35px 0px 40px 0px;
+  margin: 50px 0px 23px 0px;
   padding: 0px 0px 0px 90px;
   background: url("../img/ico/Business.png") left no-repeat;
 }
@@ -482,24 +483,24 @@ h1, h2, h3, h4, h5, h6 {
 .fiveth__text {
   font-family: "Helvetica Neue";
   width: 452px;
-  height: auto;
   font-size: 16px;
   line-height: 24px;
-  margin: 0px 0px 53px 0px;
+  margin: 0px 0px 35px 0px;
 }
 
 .fiveth__list {
   font-family: "MyriadPro";
   width: 375px;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 20px;
   font-weight: 600;
   color: #ffffff;
+  padding: 0px 0px 0px 0px;
 }
 
 .fiveth__list li {
-  background: url("../img/ico/shape_1_copy_849.png") left 0px no-repeat;
-  padding: 0px 0px 50px 75px;
+  background: url("../img/ico/shape_1_copy_849.png") left 6px no-repeat;
+  padding: 27px 0px 27px 75px;
 }
 
 .iphones {
@@ -664,7 +665,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bio .name {
-  margin: 0 70px 12px 24px;
+  margin: 0 0px 10px 24px;
   font-family: "MyriadPro";
   font-size: 32px;
   font-weight: 600;
@@ -672,10 +673,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bio .from {
-  margin: 12px 27px 10px 23px;
+  margin: 10px 27px 0px 24px;
   font-family: "Helvetica Neue";
   font-size: 24px;
+  line-height: 15px;
   color: #000000;
+}
+
+.bio .reviews {
+  font-size: 34px;
+  margin: 0px 0px 0px 24px;
+  color: grey;
+}
+
+.bio .reviews .reviewse {
+  font-size: 12px;
+  color: grey;
+  font-family: "Helvetica Neue";
+}
+
+.bio .reviews .stars {
+  color: #3bd071;
 }
 
 .counter__text {
@@ -838,17 +856,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "MyriadPro";
   font-size: 16px;
   line-height: 24px;
-  padding: 0px 0px 0px 0px;
 }
 
 .inpt__email input {
-  border: 0 solid #3cd072;
   height: 48px;
-  font-family: "Myriad Pro";
+  font-family: "MyriadPro";
   width: 456px;
   color: #3cd072;
   font-size: 16px;
-  line-height: 48px;
+  line-height: 24px;
   padding: 0px 0px 0px 10px;
   margin: 0px 0px 24px 0px;
 }
@@ -858,7 +874,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "MyriadPro";
   font-size: 16px;
   line-height: 24px;
-  padding: 0px 0px 0px 0px;
 }
 
 .inpt__textarea textarea {
@@ -889,13 +904,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
   font-weight: 600;
   color: #3cd072;
-  padding: 12px 75px;
+  padding: 12px 75px 12px 70px;
   background-color: #000;
   border-radius: 5px;
-  margin: 0px 0px 0px 0px;
-}
-
-.nine__btn a {
   color: #fff;
 }
 
@@ -919,6 +930,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .facebook {
+  display: inline-block;
   margin: 17px 0px 0px 0px;
   font-family: "MyriadPro";
   font-size: 24px;
@@ -930,6 +942,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .twittr {
+  display: inline-block;
   margin: 17px 0px 0px 0px;
   font-family: "MyriadPro";
   font-size: 24px;
@@ -941,6 +954,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .vkontakte {
+  display: inline-block;
   margin: 17px 0px 0px 0px;
   font-family: "MyriadPro";
   font-size: 24px;
@@ -964,7 +978,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 959px;
+  width: 970px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
