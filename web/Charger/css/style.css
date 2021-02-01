@@ -693,7 +693,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0.71;
   font-weight: 100;
   padding: 0px 0px 0px 55px;
-  background: url("/img/watch/icon_icon.png") left no-repeat;
+  background: url("../img/watch/icon_icon.png") left no-repeat;
 }
 
 .seven__card2 {
