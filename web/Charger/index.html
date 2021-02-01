@@ -33,15 +33,15 @@
                               <span>App Store</span>
                            </a>
                         </div>
-                        <div class="card__form">
-                           <div class="form__title">Sign up for the release date:
-                           </div>
-                           <input class="email" type="email" placeholder="Your e-mail">
-                           <button class="form__btn">Notify me</button>
+                        <div class="form__title">Sign up for the release date:
                         </div>
+                        <form class="card__form" action="#popup">
+                           <input class="email" type="email" placeholder="Your e-mail">
+                           <button class="form__btn" type="submit">Notify me</button>
+                        </form>
                      </div>
                   </div>
-                  <div class="card__iphone_b">
+                  <div class="card__iphone-b">
                      <img src="./img/ico/2-layers.png" alt="">
                   </div>
                </div>
@@ -177,9 +177,9 @@
       <div class="six__card">
          <div class="six__bg">
             <div class="six__title">Sign up for the release date: </div>
-            <div class="six__form"><input type="email" placeholder="Your e-mail">
+            <form class="card__form six__form" action="#popup"><input type="email" placeholder="Your e-mail">
                <button class="six__btn">Notify me</button>
-            </div>
+            </form>
          </div>
       </div>
       <div class="seven__card">
@@ -196,12 +196,6 @@
             </div>
             <div class="watch">
                <img src="./img/ico/watch.png" class="watch__watch" alt="">
-               <img src="" alt="" class="watch__img1">
-               <img src="" alt="" class="watch__img2">
-               <img src="" alt="" class="watch__img3">
-               <img src="" alt="" class="watch__img4">
-               <img src="" alt="" class="watch__img5">
-               <img src="" alt="" class="watch__img6">
             </div>
             <div class="seven__button">
                <a href="" class="btn__seevn">Sign Up to Get a Chance to Win</a>
@@ -307,57 +301,67 @@
       <div class="eight__card">
          <div class="eight__bg">
             <div class="eight__title">Sign up for the release date: </div>
-            <div class="eight__form"><input type="email" placeholder="Your e-mail">
+            <form class="card__form eight__form" action="#popup"><input type="email" placeholder="Your e-mail">
                <button class="eight__btn">Notify me</button>
-            </div>
          </div>
       </div>
-      <div class="nine__card">
-         <div class="nine__bg">
-            <div class="nine__bg__color">
-               <div class="nine__container">
-                  <div class="nine__description">
-                     <div class="nine__title">Contact Us</div>
-                     <div class="inpt__name">
-                        <input type="name" placeholder="Name">
-                     </div>
-                     <div class="inpt__email">
-                        <input type="email" placeholder="E-mail">
-                     </div>
-                     <div class="inpt__textarea">
-                        <textarea type="textarea" placeholder="Messaage"></textarea>
-                     </div>
-                     <div>
-                        <button class="nine__btn">Send</button>
-                     </div>
+   </div>
+   <div class="nine__card">
+      <div class="nine__bg">
+         <div class="nine__bg__color">
+            <div class="nine__container">
+               <div class="card__form eight__form" action="#popup" class="nine__description">
+                  <div class="nine__title">Contact Us</div>
+                  <div class="inpt__name">
+                     <input type="name" placeholder="Name">
                   </div>
-                  <div class="contacts">
-                     <div class="contact__title">Keep in Touch</div>
-                     <div>
-                        <a class="facebook" href="">Facebook</a>
-                     </div>
-                     <div><a class="twittr" href="">Twitter</a></div>
-                     <div><a href="" class="vkontakte">Vkontakte</a></div>
+                  <div class="inpt__email">
+                     <input type="email" placeholder="E-mail">
                   </div>
+                  <div class="inpt__textarea">
+                     <textarea type="textarea" placeholder="Messaage"></textarea>
+                  </div>
+                  <div>
+                     <button class="nine__btn">Send</button>
+                  </div>
+               </div>
+               <div class="contacts">
+                  <div class="contact__title">Keep in Touch</div>
+                  <div><a class="facebook" href="https://www.facebook.com/skitnay/" target="_blank">Facebook</a></div>
+                  <div><a class="twittr" href="https://www.twitter.com/skitnay/" target="_blank">Twitter</a></div>
+                  <div><a class="vkontakte" href="https://www.vk.com/skitnay/" target="_blank">Vkontakte</a></div>
                </div>
             </div>
          </div>
       </div>
-      <footer class="footer">
-         <div class="footer__container">
-            <div class="footer__icons">
-               <div class="icon1">
-                  <img src="./img/watch/footer_ico.png" alt="">
-               </div>
-               <div class="icon2">
-                  <img src="./img/watch/footer__icon2.png" alt="">
-               </div>
+   </div>
+   <footer class="footer">
+      <div class="footer__container">
+         <div class="footer__icons">
+            <div class="icon1">
+               <img src="./img/watch/footer_ico.png" alt="">
             </div>
-            <div class="footer__tm">
-               PlugSpot App 2015. All Rights Reserved
+            <div class="icon2">
+               <img src="./img/watch/footer__icon2.png" alt="">
             </div>
          </div>
-      </footer>
+         <div class="footer__tm">
+            PlugSpot App 2015. All Rights Reserved
+         </div>
+      </div>
+   </footer>
+   </div>
+   <div id="popup" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <img class="popup__check" src="./img/ico/Chek.png" alt="">
+            <div class="popup__title">Your message was sent</div>
+            <div class="popup__text">
+               We will e-mail you when PlugSpot is avalible for download. Thank you!
+            </div>
+            <a href="#" class="popup__close">Close</a>
+         </div>
+      </div>
    </div>
 </body>
 

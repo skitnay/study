@@ -1,6 +1,14 @@
 @import "_nullstyle";
 
 @font-face {
+   font-family: "Helvetica Neue";
+
+   src: url("https://nomail.com.ua/files/eot/a035ad376fc36ca17d91308451b8d015.eot?#iefix") format("embedded-opentype"),
+      url("https://nomail.com.ua/files/woff/a035ad376fc36ca17d91308451b8d015.woff") format("woff"),
+      url("https://nomail.com.ua/files/woff2/a035ad376fc36ca17d91308451b8d015.woff2") format("woff2");
+}
+
+@font-face {
    font-family: "Lucida Grande";
    src: url("../fonts/8291.eot");
    src: local("☺"), url("../fonts/8291.woff") format("woff"), url("../fonts/8291.ttf") format("truetype"),
@@ -38,13 +46,17 @@
 }
 
 @font-face {
-   font-family: "Helvetica Neue";
+   font-family: "Helvetica Neue 35";
    src: url("../fonts/helveticaneuecyr-thin.eot");
    src: local("☺"), url("../fonts/helveticaneuecyr-thin.woff") format("woff"),
       url("../fonts/helveticaneuecyr-thin.ttf") format("truetype"),
       url("../fonts/helveticaneuecyr-thin.svg") format("svg");
    font-weight: normal;
    font-style: normal;
+}
+
+body {
+   overflow-x: hidden;
 }
 
 .card__bg {
@@ -142,6 +154,7 @@
    font-size: 16px;
    line-height: 24px;
    padding: 0px 0px 0px 10px;
+   margin: 0px 0px 0px 0px;
    &::-webkit-input-placeholder {
       color: #ffffff;
       font-family: "MyriadPro";
@@ -158,6 +171,11 @@
    line-height: 24px;
    margin-bottom: 12px;
 }
+
+.btnpop {
+   display: inline;
+}
+
 .form__btn {
    color: #3cd072;
    font-family: "MyriadPro - Semibold";
@@ -168,15 +186,14 @@
    border-radius: 5px;
    margin: 0px 0px 0px 10px;
 }
-.card__iphone_b {
+.card__iphone-b {
    max-width: 401px;
    max-height: 614px;
    margin: 82px 0px 0px 90px;
 }
 
-.card__iphone_b img {
-   width: 100%;
-   height: auto;
+.card__iphone-b img {
+   
 }
 
 .second__card-bg {
@@ -490,23 +507,11 @@
    font-weight: 400;
    margin: 0px auto 59px;
 }
+
 .watch {
    text-align: center;
 }
-.watch__watch {
-}
-.watch__img1 {
-}
-.watch__img2 {
-}
-.watch__img3 {
-}
-.watch__img4 {
-}
-.watch__img5 {
-}
-.watch__img6 {
-}
+
 .seven__button {
    margin: 80px 0px 142px 0px;
    text-align: center;
@@ -550,7 +555,7 @@
    }
    .from {
       margin: 10px 27px 0px 24px;
-      font-family: "Helvetica Neue";
+      font-family: "Helvetica Neue 35";
       font-size: 24px;
       line-height: 15px;
       color: #000000;
@@ -558,14 +563,14 @@
    .reviews {
       font-size: 34px;
       margin: 0px 0px 0px 24px;
-      color: grey;
+      color: #b3b3b3;
       .reviewse {
-         font-size: 12px;
-         color: grey;
+         font-size: 14px;
+         color: #b3b3b3;
          font-family: "Helvetica Neue";
       }
       .stars {
-         color:#3bd071;
+         color: #3bd071;
       }
    }
 }
@@ -579,7 +584,7 @@
 }
 .counter__score {
    margin: 17px 0 0 17px;
-   font-family: "Helvetica Neue";
+   font-family: "Helvetica Neue 35";
    font-size: 68px;
    line-height: 0.71;
    font-weight: 100;
@@ -674,8 +679,8 @@
    max-height: 624px;
 }
 .nine__description {
-   max-width: 456px;
    display: flex;
+   max-width: 456px;
    flex-direction: column;
 }
 .nine__title {
@@ -812,7 +817,6 @@
 }
 .icon1 {
    display: flex;
-   
 }
 .icon2 {
    display: flex;
@@ -826,4 +830,62 @@
    line-height: 24px;
    font-weight: 400;
    color: #909090;
+}
+
+.popup {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.8);
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   &:target {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+.popup__body {
+   min-height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 30px 10px 30px 10px;
+}
+.popup__check {
+   margin: 48px 0px 19px 0px;
+}
+.popup__content {
+   text-align: center;
+   background-color: #fff;
+   color: #000;
+   max-width: 456px;
+   padding: 0px 65px 65px 65px;
+   position: relative;
+}
+.popup__close {
+   margin: 2px 15px 48px 0px;
+   padding: 17px 50px 17px 50px;
+   background-color: #3cd072;
+   border-radius: 5px;
+   font-family: MyriadPro;
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 600;
+   color: #fff;
+}
+.popup__title {
+   font-family: "MyriadPro";
+   font-size: 24px;
+   line-height: 32px;
+   font-weight: 600;
+   color: #3cd072;
+   margin: 0px 0px 35px 0px;
+}
+.popup__text {
+   font-family: "Helvetica Neue";
+   font-size: 16px;
+   line-height: 24px;
+   margin: 0px 0px 35px 0px;
 }
