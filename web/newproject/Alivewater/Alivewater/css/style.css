@@ -1256,11 +1256,10 @@ body.ie ._ibg img {
           align-items: center;
   max-width: 200px;
   font-size: 20px;
-  margin: 0px 0px 30px 0px;
 }
 
 .footer__social a {
-  color: #3E3F43;
+  color: #263c5c;
 }
 
 .page {
@@ -1610,7 +1609,7 @@ body.ie ._ibg img {
   }
 
   .footer__logo {
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 20px 0px;
   }
 
   .footer__phone {
@@ -1631,6 +1630,10 @@ body.ie ._ibg img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .footer__social {
+    margin: 0px 0px 20px 0px;
   }
 }
 
