@@ -1256,12 +1256,10 @@ body.ie ._ibg img {
   line-height: 56px;
   color: #F5C428;
   font-weight: 600;
-  font-family: roboto;
   margin: 0px 0px 30px 0px;
 }
 
 .page__one-minititle {
-  font-family: roboto;
   font-size: 20px;
   color: #fff;
 }
@@ -1274,7 +1272,6 @@ body.ie ._ibg img {
 .page__one-btn {
   margin: 50px 0px 10px;
   padding: 16px 30px;
-  font-family: roboto;
   font-size: 17px;
   border-radius: 30px;
   line-height: 30px;
@@ -1293,8 +1290,8 @@ body.ie ._ibg img {
 }
 
 .page__one-btn:active {
-  margin: 52px 0px 8px;
-  padding: 16px 40px;
+  margin: 64px 0px 8px;
+  padding: 10px 40px 10px;
 }
 
 .page__one-btn .img__button {
@@ -1428,7 +1425,7 @@ body.ie ._ibg img {
     top: 15px;
     right: 0;
     left: 93%;
-    right: 10%;
+    right: 0%;
     width: 30px;
     height: 18px;
     cursor: pointer;
@@ -1481,8 +1478,8 @@ body.ie ._ibg img {
     top: 80%;
     left: 0;
     left: 50%;
-    -webkit-transform: translate3d(-50%, 0, 0);
-            transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-60%, 0, 0);
+            transform: translate3d(-60%, 0, 0);
   }
 
   .contacts .vk {

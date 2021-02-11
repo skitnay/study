@@ -141,11 +141,9 @@ body {
    line-height: 56px;
    color: #F5C428;
    font-weight: 600;
-   font-family: roboto;
    margin: 0px 0px 30px 0px;
 }
 .page__one-minititle {
-   font-family: roboto;
    font-size: 20px;
    color: #fff;
 }
@@ -158,7 +156,6 @@ body {
 .page__one-btn {
    margin: 50px 0px 10px;
    padding: 16px 30px;
-   font-family: roboto;
    font-size: 17px;
    border-radius: 30px;
    line-height: 30px;
@@ -170,8 +167,8 @@ body {
       transition: 0.4s;
    }
    &:active {
-      margin: 52px 0px 8px;
-      padding: 16px 40px;
+      margin: 64px 0px 8px;
+      padding: 10px 40px 10px;
    }
 	.img__button {
 		position: relative;
