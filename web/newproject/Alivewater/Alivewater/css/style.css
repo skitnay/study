@@ -1560,7 +1560,7 @@ footer {
   }
 
   .logo {
-    display: none;
+    position: fixed;
     top: 0px;
     left: 50%;
     -webkit-transform: translate3d(-50%, 0, 0);

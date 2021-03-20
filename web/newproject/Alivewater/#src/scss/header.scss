@@ -47,7 +47,8 @@
       text-align: start;
    }
    @media (max-width:900px) {
-      display: none;
+      // display: none;
+      position: fixed;
       top: 0px;
       left: 50%;
       transform:translate3d(-50%,0,0);
