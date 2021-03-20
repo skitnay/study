@@ -1311,6 +1311,7 @@ footer {
   margin: 0 auto;
   padding: 0px 15px;
   width: 100%;
+  z-index: 1;
 }
 
 .footer__flex {
@@ -1584,6 +1585,7 @@ footer {
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
+    z-index: 11;
   }
 
   .menu__body._active {
