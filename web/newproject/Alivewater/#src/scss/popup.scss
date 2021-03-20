@@ -58,7 +58,8 @@
 	&__body {
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
-		background-color: rgba(255,255,255, 1);
+		background-color: rgba(255,255,255,0.7);
+		backdrop-filter: blur(15px);
 		box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 1);
 		padding: 50px;
 		width: 100%;
@@ -71,10 +72,11 @@
 		height: 20px;
 		position: absolute;
 		top: 15px;
-		right: 15px;
+		right: 20px;
 		cursor: pointer;
 		z-index: 30;
 		font-size: 20px;
+		color:#263c5c;
 		//background: url("../img/icons/close.svg") 0 0 no-repeat;
 		@media (max-width:900px){
 			font-size: 30px;
@@ -125,15 +127,15 @@
 	
 	&__input {
 		padding: 10px 0px;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.7);
 		border-radius: 0px;
-		background-color: #fff;
+		background-color: rgba(255,255,255, 0);
 		font-size: 16px;
 		width: 60%;
 		min-width: 250px;
 		color: #000;
 		&::placeholder {
-			color: rgba(0, 0, 0, 0.5);
+			color: rgba(0, 0, 0, 0.7);
 		}
 		&._error {
 			border-bottom: 1px solid red;

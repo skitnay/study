@@ -1,0 +1,38 @@
+//====================================================================================================
+.footer {
+	background-color: #3c3c3c;
+	padding: 45px 0px;
+	// .footer__body
+	&__body {
+		text-align: center;
+	}
+	// .footer__logo
+	&__logo {
+		display: inline-block;
+		margin: 0px 0px 40px 0px;
+	}
+	// .footer__list
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+      margin: 0 0 34px 0;
+	}
+	// .footer__link
+	&__link {
+		color: #a4a4a4;
+		font-size: 14px;
+      padding: 0px 22px 0px 0px;
+      &:hover {
+         color: #fff;
+      }
+	}
+	// .footer__text
+	&__text {
+		color: #6c6c6c;
+		font-family: "Myriad Pro";
+		font-size: 14px;
+	}
+}
+
+//====================================================================================================
