@@ -1117,7 +1117,7 @@ body.ie ._ibg img {
   font-size: 16px;
   line-height: 20px;
   color: #263c5c;
-  margin: 0px 0px 0px 20p;
+  margin: 0px 0px 0px 20px;
   padding: 0px 0px 3px 0px;
   border-bottom: 1px solid #fff;
   -webkit-transition: border-bottom 0.5s linear;
@@ -1211,7 +1211,6 @@ body.ie ._ibg img {
 }
 
 .hide__logo {
-  background-color: #fff;
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1220,7 +1219,6 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   max-height: 50px;
-  width: 100%;
 }
 
 .hide__logo-drop {
@@ -1576,7 +1574,6 @@ footer {
   }
 
   .menu__body {
-    z-index: 10;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1711,6 +1708,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1718,7 +1716,6 @@ footer {
         -ms-flex-align: center;
             align-items: center;
     left: 50px;
-    z-index: 0;
   }
 
   .page {
