@@ -1,0 +1,115 @@
+footer{
+   z-index: 6;
+}
+//====================================================================================================
+
+//====================================================================================================
+
+.footer {
+   background-color: #fff;
+
+   &__row {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0px 15px;
+      width: 100%;
+      z-index: 1;
+   }
+
+   &__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width:750px){
+         display: flex;
+         flex-direction: column;
+         max-width: 750px;
+         left: 50%;
+      }
+   }
+
+   &__logo {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      min-width: 150px;
+      position: relative;
+      @media (max-width:750px){
+         margin: 0px 0px 20px 0px;
+      }
+   }
+
+   &__phone {
+      display: flex;
+      position: relative;
+      width: 190px;
+      a {
+         color:#3E3F43;
+         text-decoration: underline;
+      }
+      @media (max-width:750px){
+         margin: 0px 0px 30px 0px;
+         justify-content:center;
+         align-items: center;
+      }
+   }
+
+   &__email {
+      display: flex;
+      width: 190px;
+      a {
+         color:#3E3F43;
+         text-decoration: underline;
+      }
+      @media (max-width:750px){
+         margin: 0px 0px 30px 0px;
+         justify-content:center;
+         align-items: center;
+      }
+      z-index: 1;
+   }
+
+   &__social {
+      display: flex;
+      position: relative;
+      width: 120px;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 200px;
+      font-size: 20px;
+      a {
+         color:#263c5c;
+      }
+      @media (max-width:750px){
+         margin: 0px 0px 20px 0px;
+      }
+   }
+}
+.logo {
+
+   &__icon {
+   }
+
+   &__title {
+   }
+
+   &__title-mini {
+   }
+}
+.title {
+
+   &__drop {
+   }
+}
+.social {
+
+   &__vk {
+   }
+
+   &__odnoklasniki {
+   }
+
+   &__whatsapp {
+   }
+}
+

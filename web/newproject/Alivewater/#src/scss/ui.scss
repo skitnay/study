@@ -307,11 +307,11 @@ body.ie {
 		box-shadow: none;
 	}
 }
-/*.gm-style .gm-style-iw-c button {
+.gm-style .gm-style-iw-c button {
 	top: 5px !important;
 	right: 5px !important;
 	&::before {
-		@extend %ic;
+		// @extend %ic;
 		color: rgba(255, 255, 255, 0.5) !important;
 		content: "\e91f";
 		font-size: 7px;
@@ -319,7 +319,7 @@ body.ie {
 	img {
 		display: none !important;
 	}
-}*/
+}
 //========================================================================================================================================================
 ._custom-scroll {
 	position: fixed;

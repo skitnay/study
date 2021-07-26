@@ -1,0 +1,779 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300);
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "roboto";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 280px;
+$maxWidth: 1920;
+$maxWidthContainer: 1180;
+$md1: $maxWidthContainer+15;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+
+body {
+	color: #000;
+	font-size: 14px;
+	background-color: #fff;
+
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+	&._loaded {}
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0px 15px;
+	margin: 0 auto;
+
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery";
+//@import "pagging";
+@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	position: absolute;
+	width: 100%;
+	height: 92%;
+	top: 80px;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width:970px) {
+		top: 50px;
+		height: 95%;
+	}
+}
+
+.main-screen {
+	flex: 1 0 100%;
+	background: #0d323c;
+
+	&__video {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		width: auto;
+		height: auto;
+	}
+	
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.bg__color {
+		background: rgba(0, 0, 0, 0.0);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+}
+
+//===================================================================================================================================
+
+.content {
+	max-width: 1150px;
+	margin: 0px auto;
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+.page__one-containerrow {
+	display: flex;
+	align-items: center;
+	max-width: 1150px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	justify-content: center;
+}
+
+.page__one-container {
+	display: flex;
+	max-width: 1150px;
+	flex-direction: column;
+	z-index: 5;
+}
+
+.page__one-title {
+	font-size: 56px;
+	line-height: 56px;
+	color: #F5C428;
+	font-weight: 600;
+	margin: 0px 0px 30px 0px;
+}
+
+.page__one-minititle {
+	font-size: 20px;
+	color: #fff;
+}
+
+.btn {
+	display: inline-block;
+	background: #fff;
+}
+
+.page__one-btn {
+	display: inline-block;
+	margin: 50px 0px 10px;
+	padding: 16px 30px;
+	font-size: 17px;
+	border-radius: 30px;
+	line-height: 30px;
+	transition: 0.4s;
+	background: #fff;
+	color: #000;
+
+	@media (min-width:$md2+px) {
+		&:hover {
+			margin: 48px 0px 8px;
+			padding: 18px 40px;
+			transition: 0.4s;
+		}
+
+		&:active {
+			margin: 64px 0px 8px;
+			padding: 10px 40px 10px;
+		}
+
+	}
+
+	.img__button {
+		position: relative;
+		max-width: 20px;
+		margin: 0px 5px 0px 0px;
+		pointer-events: none;
+	}
+}
+
+.title {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+	padding: 42px 0px;
+
+	@media (max-width:$md2+px) {
+		padding: 25px 0px;
+	}
+
+	@media (max-width:$md3+px) {
+		font-size: 25px;
+		padding: 12px 0px;
+	}
+}
+
+.page__two-title {
+	background-color: #fff;
+	position: relative;
+	padding: 42px 0px 22px 0px;
+	color: #263C5C;
+}
+
+.page {
+
+	// .page__two-container
+	&__two-container {
+		position: relative;
+		background-color: #fff;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		max-width: 1150px;
+		padding-bottom: 52px;
+
+		@media (max-width:$md2+px) {
+			flex-direction: column;
+			padding: 0;
+		}
+	}
+
+	// .page__two-img
+	&__two-img {
+		pointer-events: none;
+
+		@media (max-width:$md3+px) {
+			display: none;
+		}
+	}
+
+	// .page__two-text
+	&__two-text {
+		font-size: 18px;
+		line-height: 21px;
+		text-align: left;
+		color: #273453;
+		max-width: 614px;
+
+		@media (max-width:$md2+px) {
+			text-align: center;
+			padding: 20px 0px;
+		}
+
+		span {
+			color: #7bb72d;
+			font-weight: 600;
+
+			@media (max-width:$md2+px) {
+				color: #263C5C;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.cleaning {
+
+	// .cleaning__title
+	&__title {
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;
+		align-items: center;
+		text-align: center;
+		color: #F5C428;
+		padding-bottom: 18px;
+	}
+
+	// .cleaning__text
+	&__text {
+		font-family: Roboto;
+		font-size: 18px;
+		line-height: 21px;
+		text-align: center;
+		color: #273453;
+		padding: 0px 0px 20px 0px;
+	}
+
+	// .cleaning__degree
+	&__degree {
+		pointer-events: none;
+		display: flex;
+		justify-content: space-around;
+		padding: 0px 0px 41px 0px;
+
+		@media (max-width:$md2 +px) {
+			display: none;
+		}
+	}
+}
+
+.bg__color {
+	background: rgba(38, 60, 92, 0.7);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.faq {
+	&__bg {}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+
+		@media (max-width:$md2+px) {
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 0px 25px;
+		}
+	}
+
+	&__content {
+		max-width: 1150px;
+		margin: 0px auto;
+	}
+
+	&__title {
+		position: relative;
+		color: #fff;
+	}
+
+	.qa {
+		&__title {
+			max-width: 350px;
+			padding: 0px 0px 0px 22px;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 21px;
+			display: flex;
+			align-items: center;
+			color: #263C5C;
+		}
+
+		&__text {
+			padding: 0px 0px 0px 20px;
+			max-width: 420px;
+			font-size: 14px;
+			line-height: 16px;
+			color: #263C5C;
+		}
+	}
+
+	&__qa {
+		position: relative;
+		border-radius: 7px;
+		max-width: 450px;
+		padding: 12px;
+		margin: 0px 0px 56px 24px;
+		background-color: #fff;
+
+		@media (max-width:$md2+px) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		&::after {
+			content: "Q";
+			position: absolute;
+			top: 4px;
+			left: -24px;
+			font-family: Rubik;
+			font-weight: 300;
+			font-size: 36px;
+			color: #273453;
+			border: 2px solid #273453;
+			background-color: #fff;
+			border-radius: 50%;
+			padding: 0 8px;
+		}
+	}
+}
+
+.advantage {
+	margin-bottom: 16px;
+
+	// .advantage__title
+	&__title {
+		color: #263C5C;
+	}
+
+	// .advantage__subtitle
+	&__subtitle {
+		text-align: center;
+		font-size: 22px;
+		margin-bottom: 26px;
+	}
+
+	// .advantage__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	// .advantage__content
+	&__content {
+		margin-bottom: 45px;
+		max-width: 479px;
+		text-align: center;
+	}
+
+	// .advantage__icon
+	&__icon {
+		position: relative;
+		padding: 20px 0px;
+		max-width: 100px;
+		border: 4px solid #F5C428;
+		border-radius: 50%;
+		margin: 0px auto;
+	}
+
+	.fas,
+	.far {
+		color: #F5C428;
+		font-size: 50px;
+	}
+
+	// .advantage__minititle
+	&__minititle {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		padding: 12px 0;
+	}
+
+	// .advantage__text
+	&__text {
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
+
+.waterPump {
+
+	// .waterPump__bg
+	&__bg {
+		position: relative;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+
+	// .waterPump__title
+	&__title {
+		color: #fff;
+		position: relative;
+	}
+}
+
+.waterPump-slider {
+
+	// .waterPump__img
+	&__content {}
+
+	&__slide {
+		min-width: 0;
+	}
+
+	&__og {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1150px;
+		margin: 0px auto;
+		margin-bottom: 50px;
+
+		@media (max-width:$md2+px) {
+			flex-direction: column;
+			padding: 0 15px 30px;
+		}
+	}
+
+	&__img {
+		img {
+			position: relative;
+			pointer-events: none;
+			max-width: 400px;
+		}
+	}
+
+	// .waterPump__text
+	&__text {
+		color: #fff;
+		text-align: right;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		max-width: 546px;
+
+		@media (max-width:$md2+px) {
+			text-align: center;
+		}
+
+		span {
+			color: #F5C428;
+		}
+	}
+
+	&__pagination {
+		margin-bottom: 20px;
+	}
+}
+
+.waterPump-slider .swiper-pagination-bullet {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #fff;
+}
+
+.coast {
+	margin-bottom: 42px;
+
+	// .coast__title
+	&__title {
+		color: #263C5C;
+	}
+
+	// .coast__subt
+	&__subtitle {
+		text-align: center;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		color: #263C5C;
+		margin-bottom: 50px;
+
+		@media (max-width:$md2+px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	// .coast__flex
+	&__flex {}
+
+	// .coast__wrapper
+	&__wrapper {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		@media (max-width:$md2+px) {
+			flex-direction: column;
+		}
+	}
+
+	// .coast__slide
+	&__slide {
+		&:first-child {
+			@media (max-width:$md2+px) {
+				margin-top: 0px;
+			}
+		}
+
+		@media (max-width:$md2+px) {
+			margin-top: 30px;
+		}
+	}
+}
+
+.slide {
+	text-align: center;
+
+	// .slide__img
+	&__img {
+		text-align: center;
+		margin-bottom: 26px;
+
+		img {
+			max-height: 300px;
+			pointer-events: none;
+
+			@media (max-width:$md2+px) {
+				max-height: 200px;
+			}
+		}
+	}
+
+	// .slide__title
+	&__title {
+		text-align: center;
+		font-size: 20px;
+		line-height: 23px;
+		font-weight: bold;
+		color: #263C5C;
+		margin-bottom: 14px;
+
+		span {
+			color: #F5C428;
+		}
+	}
+
+	// .slide__subtitle
+	&__subtitle {
+		text-align: center;
+		font-size: 20px;
+		line-height: 23px;
+		color: #263C5C;
+	}
+}
+
+
+
+
+.request {
+	.bg__color {
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	// .request__bg
+	&__bg {}
+
+	// .request__content
+	&__content {
+		max-width: 1150px;
+		margin: 0px auto;
+		position: relative;
+		max-height: 795px;
+
+		@media (max-width:$md2+px) {
+			padding: 0px 15px;
+		}
+	}
+
+	// .request__title
+	&__title {
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 42px;
+		color: #F5C428;
+	}
+
+	// .request__subtitle
+	&__subtitle {
+		color: #fff;
+		text-align: center;
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 29px;
+		margin-bottom: 54px;
+
+		@media (max-width:$md2+px) {
+			margin-bottom: 15px;
+			line-height: 20px;
+			font-size: 18px;
+		}
+	}
+
+	// .request__text
+	&__text {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		color: #fff;
+		margin-bottom: 47px;
+
+		@media (max-width:$md2+px) {
+			font-size: 15px;
+			line-height: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	// .request__subtext
+	&__subtext {
+		text-align: center;
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 29px;
+		color: #fff;
+		margin-bottom: 0px;
+
+		@media (max-width:$md2+px) {
+			font-size: 18px;
+			line-height: 20px;
+		}
+
+		span {
+			color: #F5C428;
+		}
+	}
+
+	// .request__button
+	&__button {
+		text-align: center;
+	}
+
+	.page__one-btn {
+		margin: 47px 0px 42px 0px;
+
+		&:hover {
+			margin: 47px 0px 42px 0px;
+		}
+
+		&:active {
+			margin: 53px 0px 48px 0px;
+		}
+	}
+}
+
+.map__title {
+	color: #263C5C;
+}
+
+.map {
+
+	// .map__title
+	&__title {
+		color: #263C5C;
+	}
+
+	// .map__map
+	&__map {
+		iframe {
+			@media (max-width:$md2+px) {
+				max-height: 300px;
+			}
+		}
+	}
+}

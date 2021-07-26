@@ -1,0 +1,18 @@
+{
+	"camelcase" : false,
+	"indent" : 2,
+	"undef" : false,
+	"quotmark" : false,
+	"trailing" : true,
+	"curly" : false,
+	"strict" : false,
+	"browser" : true,
+	"devel" : true,
+	"jquery" : true,
+	"esversion": 8,
+	"node": true,
+	"loopfunc": true,
+	"ignoreDelimiters": [
+		{ "start": "start-non-standard", "end": "end-non-standard" }
+	]
+}
