@@ -13,17 +13,17 @@
 }
 
 @font-face {
-  font-family: 'icons';
+  font-family: "icons";
   src: url("./fonts/icons.ttf?de6law") format("truetype"), url("./fonts/icons.woff?de6law") format("woff"), url("./fonts/icons.svg?de6law#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="_icon-"]::before,
+[class^=_icon-]::before,
 [class*=" _icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icons' !important;
+  font-family: "icons" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -36,31 +36,31 @@
 }
 
 ._icon-thumbs-up:before {
-  content: "\e901";
+  content: "";
 }
 
 ._icon-odnoklassniki:before {
-  content: "\e906";
+  content: "";
 }
 
 ._icon-coins:before {
-  content: "\e900";
+  content: "";
 }
 
 ._icon-star:before {
-  content: "\e902";
+  content: "";
 }
 
 ._icon-tree:before {
-  content: "\e903";
+  content: "";
 }
 
 ._icon-vk:before {
-  content: "\e904";
+  content: "";
 }
 
 ._icon-whatsapp:before {
-  content: "\e905";
+  content: "";
 }
 
 * {
@@ -290,9 +290,9 @@ body._lock {
   display: block;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type=text],
+input[type=email],
+input[type=tel],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1754,8 +1754,7 @@ footer {
   padding: 10px 40px 10px 10px;
 }
 
-.faq__cards._init .faq__title::before
-.faq__cards._init .faq__title::after {
+.faq__cards._init .faq__title::before .faq__cards._init .faq__title::after {
   content: "";
   width: 20px;
   height: 1px;
