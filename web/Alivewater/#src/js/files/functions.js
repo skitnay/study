@@ -173,67 +173,67 @@ for (let index = 0; index < tabs.length; index++) {
 	}
 }
 //=================
-//Spollers
-let spollers = document.querySelectorAll("._spoller");
-let spollersGo = true;
-if (spollers.length > 0) {
+// Spollers
+// let spollers = document.querySelectorAll("._spoller");
+// let spollersGo = true;
+// if (spollers.length > 0) {
 
-	function spollerCLick(e) {
-		const spoller = e.target;
-		if (spollersGo) {
-			spollersGo = false;
+// 	function spollerCLick(e) {
+// 		const spoller = e.target;
+// 		if (spollersGo) {
+// 			spollersGo = false;
 
-			if (spoller.closest('._spollers').classList.contains('_one')) {
-				let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
-				for (let i = 0; i < curent_spollers.length; i++) {
-					let el = curent_spollers[i];
-					if (el != spoller) {
-						el.classList.remove('_active');
-						_slideUp(el.nextElementSibling);
-					}
-				}
-			}
-			spoller.classList.toggle('_active');
-			_slideToggle(spoller.nextElementSibling);
+// 			if (spoller.closest('._spollers').classList.contains('_one')) {
+// 				let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
+// 				for (let i = 0; i < curent_spollers.length; i++) {
+// 					let el = curent_spollers[i];
+// 					if (el != spoller) {
+// 						el.classList.remove('_active');
+// 						_slideUp(el.nextElementSibling);
+// 					}
+// 				}
+// 			}
+// 			spoller.classList.toggle('_active');
+// 			_slideToggle(spoller.nextElementSibling);
 
-			setTimeout(function () {
-				spollersGo = true;
-			}, 500);
-		}
-	}
-	function spollersInit() {
-		for (let index = 0; index < spollers.length; index++) {
-			const spoller = spollers[index];
-			let spollerMax = spoller.getAttribute('data-max');
+// 			setTimeout(function () {
+// 				spollersGo = true;
+// 			}, 500);
+// 		}
+// 	}
+// 	function spollersInit() {
+// 		for (let index = 0; index < spollers.length; index++) {
+// 			const spoller = spollers[index];
+// 			let spollerMax = spoller.getAttribute('data-max');
 
-			if (spollerMax && window.innerWidth > spollerMax) {
-				if (spoller.classList.contains('_init')) {
-					spoller.classList.remove('_active');
-					spoller.classList.remove('_init');
-					spoller.nextElementSibling.style.cssText = '';
-					spoller.removeEventListener("click", spollerCLick);
-				}
-			} else if (!spoller.classList.contains('_init')) {
-				spoller.classList.add('_init');
-				spoller.addEventListener("click", spollerCLick);
-			}
-		}
-	}
-	function spollersShowActive() {
-		for (let index = 0; index < spollers.length; index++) {
-			const spoller = spollers[index];
-			if (spoller.classList.contains('_active')) {
-				_slideToggle(spoller.nextElementSibling);
-			}
-		}
-	}
-	window.addEventListener("resize", spollersInit);
+// 			if (spollerMax && window.innerWidth > spollerMax) {
+// 				if (spoller.classList.contains('_init')) {
+// 					spoller.classList.remove('_active');
+// 					spoller.classList.remove('_init');
+// 					spoller.nextElementSibling.style.cssText = '';
+// 					spoller.removeEventListener("click", spollerCLick);
+// 				}
+// 			} else if (!spoller.classList.contains('_init')) {
+// 				spoller.classList.add('_init');
+// 				spoller.addEventListener("click", spollerCLick);
+// 			}
+// 		}
+// 	}
+// 	function spollersShowActive() {
+// 		for (let index = 0; index < spollers.length; index++) {
+// 			const spoller = spollers[index];
+// 			if (spoller.classList.contains('_active')) {
+// 				_slideToggle(spoller.nextElementSibling);
+// 			}
+// 		}
+// 	}
+// 	window.addEventListener("resize", spollersInit);
 
-	setTimeout(function () {
-		spollersShowActive();
-		spollersInit();
-	}, 0);
-}
+// 	setTimeout(function () {
+// 		spollersShowActive();
+// 		spollersInit();
+// 	}, 0);
+// }
 //=================
 //Gallery
 let gallery = document.querySelectorAll('._gallery');
@@ -253,7 +253,7 @@ function gallery_init() {
 //=================
 //SearchInList
 function search_in_list(input) {
-	let ul = input.parentNode.querySelector('ul')
+	let ul = input.parentNode.querySelector('ul');
 	let li = ul.querySelectorAll('li');
 	let filter = input.value.toUpperCase();
 
@@ -331,7 +331,7 @@ for (let index = 0; index < popup_link.length; index++) {
 			popup_open(item, video);
 		}
 		e.preventDefault();
-	})
+	});
 }
 for (let index = 0; index < popups.length; index++) {
 	const popup = popups[index];
@@ -389,7 +389,7 @@ if (popup_close_icon) {
 		const el = popup_close_icon[index];
 		el.addEventListener('click', function () {
 			popup_close(el.closest('.popup'));
-		})
+		});
 	}
 }
 document.addEventListener('keydown', function (e) {
@@ -423,7 +423,8 @@ let _slideUp = (target, duration = 500) => {
 		target.style.removeProperty('transition-property');
 		target.classList.remove('_slide');
 	}, duration);
-}
+};
+
 let _slideDown = (target, duration = 500) => {
 	target.style.removeProperty('display');
 	let display = window.getComputedStyle(target).display;
@@ -453,7 +454,8 @@ let _slideDown = (target, duration = 500) => {
 		target.style.removeProperty('transition-property');
 		target.classList.remove('_slide');
 	}, duration);
-}
+};
+
 let _slideToggle = (target, duration = 500) => {
 	if (!target.classList.contains('_slide')) {
 		target.classList.add('_slide');
@@ -463,7 +465,7 @@ let _slideToggle = (target, duration = 500) => {
 			return _slideUp(target, duration);
 		}
 	}
-}
+};
 //========================================
 //Wrap
 function _wrap(el, wrapper) {
@@ -480,7 +482,7 @@ function _removeClasses(el, class_name) {
 //========================================
 //IsHidden
 function _is_hidden(el) {
-	return (el.offsetParent === null)
+	return (el.offsetParent === null);
 }
 // ShowMore Beta ========================
 let moreBlocks = document.querySelectorAll('._more-block');
@@ -569,7 +571,7 @@ function animate({ timing, draw, duration }) {
 function makeEaseOut(timing) {
 	return function (timeFraction) {
 		return 1 - timing(1 - timeFraction);
-	}
+	};
 }
 function makeEaseInOut(timing) {
 	return function (timeFraction) {
@@ -577,10 +579,10 @@ function makeEaseInOut(timing) {
 			return timing(2 * timeFraction) / 2;
 		else
 			return (2 - timing(2 * (1 - timeFraction))) / 2;
-	}
+	};
 }
 function quad(timeFraction) {
-	return Math.pow(timeFraction, 2)
+	return Math.pow(timeFraction, 2);
 }
 function circ(timeFraction) {
 	return 1 - Math.sin(Math.acos(timeFraction));

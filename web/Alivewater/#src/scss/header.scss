@@ -3,7 +3,6 @@
    z-index: 8;
    background-color: #fff;
    top: 0px;
-   position: relative;
 
    &__menu {
       max-width: 1180px;
@@ -57,7 +56,7 @@
    }
 
    @media (max-width:970px) {
-      // display: none;
+      display: none;
       position: fixed;
       top: 0px;
       left: 50%;
@@ -110,14 +109,15 @@
       position: absolute;
 
       &__body {
+         z-index: 3;
          position: fixed;
          width: 100%;
          height: 100%;
          overflow: auto;
-         top: 0;
+         bottom: 0;
          left: 0;
          background-color: #fff;
-         transform: translate3d(0, -100%, 0);
+         transform: translate3d(200%, 0%, 0);
          transition: 1s;
 
          &._active {
@@ -169,7 +169,7 @@
       position: absolute;
       top: 15px;
       right: 0;
-      left: 90%;
+      left: 85%;
       right: 0%;
       width: 30px;
       height: 18px;
@@ -217,22 +217,20 @@
 
 .contacts {
    display: flex;
-   position: relative;
    width: 166px;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
 
    @media (max-width:970px) {
       position: fixed;
       top: 80%;
-      left: 0;
-      left: 50%;
-      transform: translate3d(-60%, 0, 0);
+      left: 52%;
+      transform: translate3d(-50%, 0, 0);
    }
 
-   .vk {
-      font-size: 20px;
-      padding: 7px;
+   .vk a {
+      font-size: 25px;
+      padding: 8px 5.5px 2px 5.5px;
       font-weight: 700;
       border-radius: 50%;
       border: 2px solid #263c5c;
@@ -248,14 +246,14 @@
 
       @media (max-width:970px) {
          font-size: 30px;
-         margin: 0px 10px;
+         padding: 8px 5.5px 2px 5.5px;
       }
    }
 
-   .odnoklasniki {
-      font-size: 20px;
+   .odnoklassniki a {
+      font-size: 25px;
       font-weight: 700;
-      padding: 7px 12px;
+      padding: 8px 13px 2px 13px;
       border-radius: 50%;
       border: 2px solid #263c5c;
       color: #263c5c;
@@ -270,14 +268,15 @@
 
       @media (max-width:970px) {
          font-size: 30px;
-         margin: 0px 10px;
+         padding: 8px 13px 2px 13px;
       }
    }
 
-   .whatsapp {
-      font-size: 20px;
+   .whatsapp a {
+      font-size: 25px;
       font-weight: 700;
-      padding: 7px 9.5px;
+      padding: 8px 9px 1px 9px;
+      font-weight: bold;
       border-radius: 50%;
       border: 2px solid #263c5c;
       color: #263c5c;
@@ -292,7 +291,7 @@
 
       @media (max-width:970px) {
          font-size: 30px;
-         margin: 0px 10px;
+         padding: 8px 9px 1px 9px;
       }
    }
 }
@@ -302,9 +301,10 @@
       display: none;
       justify-content: center;
       align-items: center;
-      max-height: 50px;
 
       @media (max-width:970px) {
+         max-height: 50px;
+         z-index: 8;
          background-color: #fff;
          display: flex;
          width: 100%;

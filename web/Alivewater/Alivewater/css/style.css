@@ -4,6 +4,65 @@
 
 @import url(https://fonts.googleapis.com/css?family=Rubik:300);
 
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url("./fonts/icons.ttf?de6law") format("truetype"), url("./fonts/icons.woff?de6law") format("woff"), url("./fonts/icons.svg?de6law#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-thumbs-up:before {
+  content: "\e901";
+}
+
+._icon-odnoklassniki:before {
+  content: "\e906";
+}
+
+._icon-coins:before {
+  content: "\e900";
+}
+
+._icon-star:before {
+  content: "\e902";
+}
+
+._icon-tree:before {
+  content: "\e903";
+}
+
+._icon-vk:before {
+  content: "\e904";
+}
+
+._icon-whatsapp:before {
+  content: "\e905";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -1043,7 +1102,6 @@ body.ie ._ibg img {
   z-index: 8;
   background-color: #fff;
   top: 0px;
-  position: relative;
 }
 
 .header__menu {
@@ -1151,19 +1209,17 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   width: 166px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.contacts .vk {
-  font-size: 20px;
-  padding: 7px;
+.contacts .vk a {
+  font-size: 25px;
+  padding: 8px 5.5px 2px 5.5px;
   font-weight: 700;
   border-radius: 50%;
   border: 2px solid #263c5c;
@@ -1173,7 +1229,7 @@ body.ie ._ibg img {
   transition: background-color, color 0.2s;
 }
 
-.contacts .vk:hover {
+.contacts .vk a:hover {
   color: #fff;
   background-color: #6A90C8;
   border: 2px solid #6A90C8;
@@ -1182,10 +1238,10 @@ body.ie ._ibg img {
   transition: color, background-color 0.2s;
 }
 
-.contacts .odnoklasniki {
-  font-size: 20px;
+.contacts .odnoklassniki a {
+  font-size: 25px;
   font-weight: 700;
-  padding: 7px 12px;
+  padding: 8px 13px 2px 13px;
   border-radius: 50%;
   border: 2px solid #263c5c;
   color: #263c5c;
@@ -1194,7 +1250,7 @@ body.ie ._ibg img {
   transition: border, color 0.2s;
 }
 
-.contacts .odnoklasniki:hover {
+.contacts .odnoklassniki a:hover {
   color: #fff;
   background-color: #DE862F;
   border: 2px solid #DE862F;
@@ -1203,10 +1259,11 @@ body.ie ._ibg img {
   transition: border, background-color 0.2s;
 }
 
-.contacts .whatsapp {
-  font-size: 20px;
+.contacts .whatsapp a {
+  font-size: 25px;
   font-weight: 700;
-  padding: 7px 9.5px;
+  padding: 8px 9px 1px 9px;
+  font-weight: bold;
   border-radius: 50%;
   border: 2px solid #263c5c;
   color: #263c5c;
@@ -1215,7 +1272,7 @@ body.ie ._ibg img {
   transition: border, background-color 0.2s;
 }
 
-.contacts .whatsapp:hover {
+.contacts .whatsapp a:hover {
   color: #fff;
   background-color: #83CB79;
   border: 2px solid #83CB79;
@@ -1232,7 +1289,6 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-height: 50px;
 }
 
 .hide__logo-drop {
@@ -1414,6 +1470,19 @@ footer {
           flex-direction: column;
 }
 
+.content {
+  max-width: 1150px;
+  margin: 0px auto;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  padding: 42px 0px;
+}
+
 .main-screen {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
@@ -1423,10 +1492,13 @@ footer {
 
 .main-screen__video {
   position: absolute;
+  top: 0px;
   right: 0;
   bottom: 0;
   min-width: 100%;
+  min-height: 100%;
   width: auto;
+  overflow: hidden;
   height: auto;
 }
 
@@ -1438,22 +1510,7 @@ footer {
   left: 0;
 }
 
-.main-screen .bg__color {
-  background: rgba(0, 0, 0, 0);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.content {
-  max-width: 1150px;
-  margin: 0px auto;
-}
-
-.page__one-containerrow {
+.main-screen__containerrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1469,7 +1526,7 @@ footer {
           justify-content: center;
 }
 
-.page__one-container {
+.main-screen__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1481,7 +1538,7 @@ footer {
   z-index: 5;
 }
 
-.page__one-title {
+.main-screen__title {
   font-size: 56px;
   line-height: 56px;
   color: #F5C428;
@@ -1489,17 +1546,12 @@ footer {
   margin: 0px 0px 30px 0px;
 }
 
-.page__one-minititle {
+.main-screen__minititle {
   font-size: 20px;
   color: #fff;
 }
 
-.btn {
-  display: inline-block;
-  background: #fff;
-}
-
-.page__one-btn {
+.main-screen__btn {
   display: inline-block;
   margin: 50px 0px 10px;
   padding: 16px 30px;
@@ -1509,33 +1561,34 @@ footer {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   color: #000;
 }
 
-.page__one-btn .img__button {
+.main-screen__btn .img__button {
   position: relative;
   max-width: 20px;
   margin: 0px 5px 0px 0px;
   pointer-events: none;
 }
 
-.title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  padding: 42px 0px;
+.second-screen {
+  position: relative;
+  min-width: 100%;
+  background-color: #fff;
+  min-height: 500px;
 }
 
-.page__two-title {
+.second-screen__title {
   background-color: #fff;
   position: relative;
   padding: 42px 0px 22px 0px;
   color: #263C5C;
 }
 
-.page__two-container {
+.second-screen__container {
+  max-width: 1150px;
+  margin: 0px auto;
   position: relative;
   background-color: #fff;
   display: -webkit-box;
@@ -1546,15 +1599,15 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1150px;
+  z-index: 8;
   padding-bottom: 52px;
 }
 
-.page__two-img {
+.second-screen__img {
   pointer-events: none;
 }
 
-.page__two-text {
+.second-screen__text {
   font-size: 18px;
   line-height: 21px;
   text-align: left;
@@ -1562,7 +1615,7 @@ footer {
   max-width: 614px;
 }
 
-.page__two-text span {
+.second-screen__text span {
   color: #7bb72d;
   font-weight: 600;
 }
@@ -1647,6 +1700,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   color: #263C5C;
+  background-color: #fff;
+  text-align: left;
 }
 
 .faq .qa__text {
@@ -1655,6 +1710,16 @@ footer {
   font-size: 14px;
   line-height: 16px;
   color: #263C5C;
+}
+
+.faq .qa__text a {
+  color: #7bb72d;
+  font-weight: bold;
+}
+
+.faq .qa__text a:visited {
+  color: #7bb72d;
+  font-weight: bold;
 }
 
 .faq__qa {
@@ -1679,6 +1744,42 @@ footer {
   background-color: #fff;
   border-radius: 50%;
   padding: 0 8px;
+}
+
+.faq__cards._init .faq__title {
+  cursor: pointer;
+}
+
+.faq__cards._init .faq__title {
+  padding: 10px 40px 10px 10px;
+}
+
+.faq__cards._init .faq__title::before
+.faq__cards._init .faq__title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #263C5C;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.faq__qa._init .faq__title::after {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.faq__qa._init .faq__title::after._active {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .advantage {
@@ -1716,15 +1817,15 @@ footer {
 
 .advantage__icon {
   position: relative;
-  padding: 20px 0px;
+  padding: 18.5px 0px;
   max-width: 100px;
+  min-height: 100px;
   border: 4px solid #F5C428;
   border-radius: 50%;
   margin: 0px auto;
 }
 
-.advantage .fas,
-.advantage .far {
+.advantage__icon p {
   color: #F5C428;
   font-size: 50px;
 }
@@ -1923,20 +2024,16 @@ footer {
   text-align: center;
 }
 
-.request .page__one-btn {
+.request .main-screen__btn {
   margin: 47px 0px 42px 0px;
 }
 
-.request .page__one-btn:hover {
+.request .main-screen__btn:hover {
   margin: 47px 0px 42px 0px;
 }
 
-.request .page__one-btn:active {
+.request .main-screen__btn:active {
   margin: 53px 0px 48px 0px;
-}
-
-.map__title {
-  color: #263C5C;
 }
 
 .map__title {
@@ -1949,7 +2046,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .page__one-btn:hover {
+  .main-screen__btn:hover {
     margin: 48px 0px 8px;
     padding: 18px 40px;
     -webkit-transition: 0.4s;
@@ -1957,7 +2054,7 @@ footer {
     transition: 0.4s;
   }
 
-  .page__one-btn:active {
+  .main-screen__btn:active {
     margin: 64px 0px 8px;
     padding: 10px 40px 10px;
   }
@@ -1996,22 +2093,31 @@ footer {
     padding: 25px 0px;
   }
 
-  .page__two-container {
+  .second-screen__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0;
+    padding: 0px 15px;
   }
 
-  .page__two-text {
+  .second-screen__text {
     text-align: center;
-    padding: 20px 0px;
+    padding: 0px 0px 20px;
   }
 
-  .page__two-text span {
+  .second-screen__text span {
     color: #263C5C;
     font-weight: 500;
+  }
+
+  .cleaning__title {
+    font-size: 22px;
+    padding: 0px 15px;
+  }
+
+  .cleaning__text {
+    padding: 0px 15px 20px;
   }
 
   .cleaning__degree {
@@ -2119,6 +2225,7 @@ footer {
   }
 
   .logo {
+    display: none;
     position: fixed;
     top: 0px;
     left: 50%;
@@ -2131,15 +2238,16 @@ footer {
   }
 
   .menu__body {
+    z-index: 3;
     position: fixed;
     width: 100%;
     height: 100%;
     overflow: auto;
-    top: 0;
+    bottom: 0;
     left: 0;
     background-color: #fff;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(200%, 0%, 0);
+            transform: translate3d(200%, 0%, 0);
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
@@ -2184,7 +2292,7 @@ footer {
     position: absolute;
     top: 15px;
     right: 0;
-    left: 90%;
+    left: 85%;
     right: 0%;
     width: 30px;
     height: 18px;
@@ -2240,28 +2348,29 @@ footer {
   .contacts {
     position: fixed;
     top: 80%;
-    left: 0;
-    left: 50%;
-    -webkit-transform: translate3d(-60%, 0, 0);
-            transform: translate3d(-60%, 0, 0);
+    left: 52%;
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
   }
 
-  .contacts .vk {
+  .contacts .vk a {
     font-size: 30px;
-    margin: 0px 10px;
+    padding: 8px 5.5px 2px 5.5px;
   }
 
-  .contacts .odnoklasniki {
+  .contacts .odnoklassniki a {
     font-size: 30px;
-    margin: 0px 10px;
+    padding: 8px 13px 2px 13px;
   }
 
-  .contacts .whatsapp {
+  .contacts .whatsapp a {
     font-size: 30px;
-    margin: 0px 10px;
+    padding: 8px 9px 1px 9px;
   }
 
   .hide__logo {
+    max-height: 50px;
+    z-index: 8;
     background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2311,7 +2420,7 @@ footer {
     padding: 12px 0px;
   }
 
-  .page__two-img {
+  .second-screen__img {
     display: none;
   }
 }
