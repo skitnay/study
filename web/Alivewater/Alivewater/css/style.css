@@ -1723,39 +1723,6 @@ footer {
   cursor: pointer;
 }
 
-.qa__title::after {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: #263C5C;
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.qa__title::before {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: #263C5C;
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-}
-
 .qa__text {
   padding: 10px 0px 0px 20px;
   max-width: 420px;
@@ -1772,6 +1739,28 @@ footer {
 .qa__text a:visited {
   color: #7bb72d;
   font-weight: bold;
+}
+
+.faq__cards._init .qa__title::before,
+.faq__cards._init .qa__title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #263C5C;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.faq__cards._init .qa__title::after {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .faq__cards._init .qa__title._active::after {
