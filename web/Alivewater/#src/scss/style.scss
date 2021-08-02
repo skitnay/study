@@ -375,45 +375,9 @@ body {
 		}
 	}
 
-
-
 	&__title {
 		position: relative;
 		color: #fff;
-	}
-
-	.qa {
-		&__title {
-			max-width: 444px;
-			padding: 0px 40px 0px 22px;
-			font-family: Roboto;
-			min-height: 42px;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 21px;
-			color: #263C5C;
-			background-color: #fff;
-			text-align: left;
-			cursor: pointer;
-		}
-
-		&__text {
-			padding: 10px 0px 0px 20px;
-			max-width: 420px;
-			font-size: 14px;
-			line-height: 16px;
-			color: #263C5C;
-
-			a {
-				color: #7bb72d;
-				font-weight: bold;
-
-				&:visited {
-					color: #7bb72d;
-					font-weight: bold;
-				}
-			}
-		}
 	}
 
 	&__qa {
@@ -447,46 +411,58 @@ body {
 }
 
 .qa {
+	&__title {
+		max-width: 444px;
+		padding: 0px 40px 0px 22px;
+		font-family: Roboto;
+		min-height: 42px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		color: #263C5C;
+		background-color: #fff;
+		text-align: left;
+		cursor: pointer;
 
+		&::after {
+			content: "";
+			width: 20px;
+			height: 1px;
+			background-color: #263C5C;
+			position: absolute;
+			right: 20px;
+			top: 30px;
+			transition: transform 0.3s ease 0s;
+			transform: rotate(-90deg);
+		}
 
-	&::after {
-		content: "";
-		width: 20px;
-		height: 1px;
-		background-color: #263C5C;
-		position: absolute;
-		right: 20px;
-		top: 30px;
-		transition: transform 0.3s ease 0s;
-		transform: rotate(-90deg);
+		&::before {
+			content: "";
+			width: 20px;
+			height: 1px;
+			background-color: #263C5C;
+			position: absolute;
+			right: 20px;
+			top: 30px;
+			transition: transform 0.3s ease 0s;
+		}
 	}
 
-	&::before {
-		content: "";
-		width: 20px;
-		height: 1px;
-		background-color: #263C5C;
-		position: absolute;
-		right: 20px;
-		top: 30px;
-		transition: transform 0.3s ease 0s;
-	}
-}
+	&__text {
+		padding: 10px 0px 0px 20px;
+		max-width: 420px;
+		font-size: 14px;
+		line-height: 16px;
+		color: #263C5C;
 
-&__text {
-	padding: 0px 0px 0px 20px;
-	max-width: 420px;
-	font-size: 14px;
-	line-height: 16px;
-	color: #263C5C;
-
-	a {
-		color: #7bb72d;
-		font-weight: bold;
-
-		&:visited {
+		a {
 			color: #7bb72d;
 			font-weight: bold;
+
+			&:visited {
+				color: #7bb72d;
+				font-weight: bold;
+			}
 		}
 	}
 }
