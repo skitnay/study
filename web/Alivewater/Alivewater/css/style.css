@@ -1686,22 +1686,18 @@ footer {
 }
 
 .faq .qa__title {
-  max-width: 350px;
+  max-width: 444px;
+  min-width: 100%;
   padding: 0px 0px 0px 22px;
   font-family: Roboto;
-  font-style: normal;
+  min-height: 42px;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #263C5C;
   background-color: #fff;
   text-align: left;
+  cursor: pointer;
 }
 
 .faq .qa__text {
@@ -1734,7 +1730,7 @@ footer {
 .faq__qa::after {
   content: "Q";
   position: absolute;
-  top: 4px;
+  top: 10px;
   left: -24px;
   font-family: Rubik;
   font-weight: 300;
@@ -1746,22 +1742,19 @@ footer {
   padding: 0 8px;
 }
 
-.faq__cards._init .faq__title {
-  cursor: pointer;
+.faq__cards._init .qa__title {
+  padding: 0 40px 0px 20px;
 }
 
-.faq__cards._init .faq__title {
-  padding: 10px 40px 10px 10px;
-}
-
-.faq__cards._init .faq__title::before .faq__cards._init .faq__title::after {
+.faq__cards._init .qa__title::before,
+.faq__cards._init .qa__title::after {
   content: "";
   width: 20px;
   height: 1px;
   background-color: #263C5C;
   position: absolute;
-  right: 10px;
-  top: 20px;
+  right: 20px;
+  top: 30px;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   -o-transition: transform 0.3s ease 0s;
@@ -1769,13 +1762,13 @@ footer {
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
-.faq__qa._init .faq__title::after {
+.faq__cards._init .qa__title::after {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.faq__qa._init .faq__title::after._active {
+.faq__cards._init .qa__title._active::after {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
