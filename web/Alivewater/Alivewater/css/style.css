@@ -1687,8 +1687,7 @@ footer {
 
 .faq .qa__title {
   max-width: 444px;
-  min-width: 100%;
-  padding: 0px 0px 0px 22px;
+  padding: 0px 40px 0px 22px;
   font-family: Roboto;
   min-height: 42px;
   font-weight: 500;
@@ -1701,7 +1700,7 @@ footer {
 }
 
 .faq .qa__text {
-  padding: 0px 0px 0px 20px;
+  padding: 10px 0px 0px 20px;
   max-width: 420px;
   font-size: 14px;
   line-height: 16px;
@@ -1740,10 +1739,6 @@ footer {
   background-color: #fff;
   border-radius: 50%;
   padding: 0 8px;
-}
-
-.faq__cards._init .qa__title {
-  padding: 0 40px 0px 20px;
 }
 
 .faq__cards._init .qa__title::before,
@@ -2120,15 +2115,13 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2137,6 +2130,7 @@ footer {
 
   .faq__qa {
     margin: 0px 0px 30px 0px;
+    width: 95%;
   }
 
   .waterPump-slider__og {

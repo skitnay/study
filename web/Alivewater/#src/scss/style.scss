@@ -363,9 +363,8 @@ body {
 
 		@media (max-width:$md2+px) {
 			display: flex;
-			flex-wrap: nowrap;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: space-between;
 			align-items: center;
 			padding: 0px 25px;
 		}
@@ -384,8 +383,7 @@ body {
 	.qa {
 		&__title {
 			max-width: 444px;
-			min-width: 100%;
-			padding: 0px 0px 0px 22px;
+			padding: 0px 40px 0px 22px;
 			font-family: Roboto;
 			min-height: 42px;
 			font-weight: 500;
@@ -398,7 +396,7 @@ body {
 		}
 
 		&__text {
-			padding: 0px 0px 0px 20px;
+			padding: 10px 0px 0px 20px;
 			max-width: 420px;
 			font-size: 14px;
 			line-height: 16px;
@@ -426,6 +424,7 @@ body {
 
 		@media (max-width:$md2+px) {
 			margin: 0px 0px 30px 0px;
+			width: 95%;
 		}
 
 		&::after {
@@ -449,10 +448,6 @@ body {
 // 	cursor: pointer;
 // }
 
-.faq__cards._init .qa__title {
-	padding: 0 40px 0px 20px;
-	;
-}
 
 .faq__cards._init .qa__title::before,
 .faq__cards._init .qa__title::after {
