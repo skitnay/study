@@ -1661,6 +1661,11 @@ footer {
   z-index: 0;
 }
 
+.faq__content {
+  max-width: 1150px;
+  margin: 0px auto;
+}
+
 .faq__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1675,16 +1680,12 @@ footer {
           align-items: stretch;
 }
 
-.faq__content {
-  max-width: 1150px;
-  margin: 0px auto;
-}
-
 .faq__title {
   position: relative;
   color: #fff;
 }
 
+<<<<<<< HEAD
 .faq .qa__title {
   max-width: 444px;
   padding: 0px 40px 0px 22px;
@@ -1717,6 +1718,8 @@ footer {
   font-weight: bold;
 }
 
+=======
+>>>>>>> 175d800ca4aa8f3f7dae72629619848902dffcf4
 .faq__qa {
   position: relative;
   border-radius: 7px;
@@ -1741,8 +1744,43 @@ footer {
   padding: 0 8px;
 }
 
+<<<<<<< HEAD
 .faq__cards._init .qa__title::before,
 .faq__cards._init .qa__title::after {
+=======
+.qa__title {
+  max-width: 444px;
+  padding: 0px 40px 0px 22px;
+  font-family: Roboto;
+  min-height: 42px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #263C5C;
+  background-color: #fff;
+  text-align: left;
+}
+
+.qa__title::after {
+>>>>>>> 175d800ca4aa8f3f7dae72629619848902dffcf4
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #263C5C;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.qa__title::before {
   content: "";
   width: 20px;
   height: 1px;
@@ -1757,10 +1795,22 @@ footer {
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
-.faq__cards._init .qa__title::after {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.qa__text {
+  padding: 0px 0px 0px 20px;
+  max-width: 420px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #263C5C;
+}
+
+.qa__text a {
+  color: #7bb72d;
+  font-weight: bold;
+}
+
+.qa__text a:visited {
+  color: #7bb72d;
+  font-weight: bold;
 }
 
 .faq__cards._init .qa__title._active::after {
@@ -2119,9 +2169,12 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+<<<<<<< HEAD
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+=======
+>>>>>>> 175d800ca4aa8f3f7dae72629619848902dffcf4
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
