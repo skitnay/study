@@ -388,7 +388,7 @@ body {
 	}
 
 	&__title {
-		padding: 20px 0 42px 0;
+		padding: 42px 0;
 		position: relative;
 		color: #fff;
 
@@ -568,7 +568,7 @@ body {
 
 	// .advantage__title
 	&__title {
-		padding: 0 0 42px 0;
+		padding: 42px 0;
 		color: #263C5C;
 
 		@media (max-width:$md3+px) {
@@ -655,8 +655,6 @@ body {
 	// .waterPump__bg
 	&__bg {
 		position: relative;
-		// background-color: #6aad22;
-		// background: url(../img/Backgrounds/bg1.jpg);
 
 		img {
 			position: absolute;
