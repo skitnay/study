@@ -141,7 +141,10 @@ body {
 
 .main-screen {
 	flex: 1 0 100%;
-	background: #0d323c;
+	background-color: #192438;
+	// background: url(../img/preview.jpg);
+	background-size: cover;
+
 
 	&__video {
 		position: absolute;
@@ -150,9 +153,14 @@ body {
 		bottom: 0;
 		min-width: 100%;
 		min-height: 100%;
+		z-index: 0;
 		width: auto;
 		overflow: hidden;
 		height: auto;
+
+		@media (max-width:$md3+px) {
+			display: none;
+		}
 	}
 
 	&__bg {
@@ -161,6 +169,11 @@ body {
 		height: 100%;
 		top: 0;
 		left: 0;
+
+		@media (max-width:$md3+px) {
+			background: url(../img/preview-min.jpg) no-repeat;
+			background-size: cover;
+		}
 	}
 
 	&__containerrow {
@@ -181,16 +194,26 @@ body {
 	}
 
 	&__title {
-		font-size: 56px;
+		font-size: 70px;
 		line-height: 56px;
-		color: #F5C428;
+		color: #fff;
 		font-weight: 600;
 		margin: 0px 0px 30px 0px;
+
+		@media (max-width:$md3+px) {
+			font-size: 50px;
+		}
 	}
 
 	&__minititle {
-		font-size: 20px;
-		color: #fff;
+		font-size: 32px;
+		padding: 30px 15px;
+		color: #f5c428;
+
+		@media (max-width:$md3+px) {
+			font-size: 20px;
+			padding: 0px 15px;
+		}
 	}
 
 	&__btn {
@@ -305,6 +328,8 @@ body {
 }
 
 .cleaning {
+	position: relative;
+	z-index: 10;
 
 	// .cleaning__title
 	&__title {
@@ -315,6 +340,8 @@ body {
 		text-align: center;
 		color: #F5C428;
 		padding-bottom: 18px;
+		position: relative;
+		z-index: 10;
 
 		@media (max-width:$md2+px) {
 			font-size: 26px;
@@ -388,7 +415,7 @@ body {
 	}
 
 	&__title {
-		padding: 42px 0;
+		padding: 20px 0 42px 0;
 		position: relative;
 		color: #fff;
 
@@ -542,14 +569,18 @@ body {
 .up {
 	position: relative;
 	width: 100%;
-	top: -3px;
+	// overflow: hidden;
+	top: -5px;
+	z-index: 1;
+	max-height: 150px;
+	height: auto;
 
 	@media (max-width:$md3+px) {
 		display: none;
 	}
 }
 
-.sect {
+.down {
 	position: relative;
 	width: 100%;
 	bottom: -4px;
