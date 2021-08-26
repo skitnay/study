@@ -81,6 +81,7 @@
       width: 100%;
       justify-content: space-between;
       padding: 0px 10px 0 10px;
+
       li {
          a {
             &:visited {
@@ -99,6 +100,7 @@
       padding: 0px 0px 3px 0px;
       border-bottom: 1px solid #fff;
       transition: border-bottom 0.5s linear;
+
       &:nth-child(1) {
          margin: 0px 0px 0px 0px;
       }
@@ -224,6 +226,7 @@
    min-width: 150px;
    justify-content: space-between;
    align-items: center;
+
    @media (max-width:970px) {
       position: fixed;
       top: 80%;
@@ -281,7 +284,6 @@
       padding: 8px 9px 1px 9px;
       font-weight: bold;
       border-radius: 50%;
-      margin: 0 2px;
       border: 2px solid #263c5c;
       color: #263c5c;
       transition: border, background-color 0.2s;

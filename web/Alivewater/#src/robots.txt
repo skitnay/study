@@ -1,0 +1,4 @@
+User-agent:*
+disallow: /test/
+sitemap: https://alivewater54.ru/sitemap.xml
+host: www.alivewater54.ru

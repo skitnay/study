@@ -145,6 +145,10 @@ body {
 	// background: url(../img/preview.jpg);
 	background-size: cover;
 
+	@media (max-width:$md3+px) {
+		background: url(../img/preview-min.jpg);
+	}
+
 
 	&__video {
 		position: absolute;
@@ -251,7 +255,6 @@ body {
 }
 
 //==============================================================================
-
 .second-screen {
 	position: relative;
 	min-width: 100%;
@@ -264,6 +267,14 @@ body {
 		position: relative;
 		padding: 42px 0px 22px 0px;
 		color: #263C5C;
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
 
 		@media (max-width:$md2+px) {
 			padding: 25px 0px 25px 0px;
@@ -282,6 +293,14 @@ body {
 		align-items: center;
 		z-index: 8;
 		padding-bottom: 52px;
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
 
 		@media (max-width:$md2+px) {
 			flex-direction: column;
@@ -330,6 +349,14 @@ body {
 .cleaning {
 	position: relative;
 	z-index: 10;
+	transform: translate(0px, 100px);
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+
+	&._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
 
 	// .cleaning__title
 	&__title {
@@ -431,6 +458,14 @@ body {
 		padding: 12px;
 		margin: 0px 0px 56px 24px;
 		background-color: #fff;
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+	
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
 
 		// &:nth-last-child(1) {
 		// 	margin-bottom: 0px;
@@ -605,6 +640,14 @@ body {
 		@media (max-width:$md3+px) {
 			padding: 20px 0;
 		}
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+	
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
 	}
 
 	// .advantage__subtitle
@@ -615,6 +658,14 @@ body {
 
 		@media (max-width:$md2+px) {
 			padding: 0px 15px 45px 15px;
+		}
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+	
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
 		}
 	}
 
@@ -634,6 +685,14 @@ body {
 
 		@media (max-width:$md2+px) {
 			padding: 0px 15px 45px 15px;
+		}
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+	
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
 		}
 	}
 
@@ -773,6 +832,14 @@ body {
 	// .coast__title
 	&__title {
 		color: #263C5C;
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+	
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
 	}
 
 	// .coast__subt
@@ -783,6 +850,14 @@ body {
 		line-height: 26px;
 		color: #263C5C;
 		margin-bottom: 50px;
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+	
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
 
 		@media (max-width:$md2+px) {
 			margin-bottom: 15px;
@@ -805,6 +880,14 @@ body {
 
 	// .coast__slide
 	&__slide {
+		transform: translate(0px, 100px);
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+	
+		&._active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
 		&:first-child {
 			@media (max-width:$md2+px) {
 				margin-top: 0px;
